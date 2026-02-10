@@ -1,7 +1,19 @@
 #!/usr/bin/env python3
 """
-Fast Image Scraper Tool
-Downloads images from any website with advanced filtering and concurrent processing
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                    ⚡ LIGHTNING IMAGE SCRAPER ⚡                           ║
+║                                                                           ║
+║  Fast Image Scraper Tool - Download thousands of images in seconds       ║
+║  Downloads images from any website with advanced filtering and           ║
+║  concurrent processing                                                    ║
+║                                                                           ║
+║  Repository: https://github.com/NYX-VORAX/lightning-image-scraper        ║
+║  Author: NYX-VORAX                                                        ║
+║  Version: 1.0.0                                                           ║
+║  License: MIT                                                             ║
+║                                                                           ║
+║  ⭐ Star us on GitHub if you find this useful!                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
 """
 
 import os
@@ -244,6 +256,14 @@ class FastImageScraper:
         """Main execution method"""
         start_time = time.time()
         
+        print("╔" + "═"*68 + "╗")
+        print("║" + " "*68 + "║")
+        print("║" + "        ⚡ LIGHTNING IMAGE SCRAPER v1.0.0 ⚡        ".center(68) + "║")
+        print("║" + " "*68 + "║")
+        print("║" + "  GitHub: github.com/NYX-VORAX/lightning-image-scraper  ".center(68) + "║")
+        print("║" + " "*68 + "║")
+        print("╚" + "═"*68 + "╝")
+        print("")
         print("="*70)
         print(f"🚀 Fast Image Scraper Started")
         print(f"   URL: {self.base_url}")
@@ -278,17 +298,28 @@ class FastImageScraper:
             print(f"   Speed: {self.downloaded_count/elapsed:.1f} images/second")
         print(f"   Location: {os.path.abspath(self.output_dir)}/")
         print("="*70)
+        print("")
+        print("🌟 Like this tool? Star us on GitHub!")
+        print("   https://github.com/NYX-VORAX/lightning-image-scraper")
+        print("")
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Fast Image Scraper - Download images from any website',
+        description='⚡ Lightning Image Scraper - Download images from any website',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Examples:
   python scrapper.py -u https://example.com -n 100
   python scrapper.py -u https://example.com -n 500 -d 3 -o my_images
   python scrapper.py -u https://example.com -n 10000 -d 2 --min-size 300
+
+GitHub: https://github.com/NYX-VORAX/lightning-image-scraper
+Author: NYX-VORAX | Version: 1.0.0 | License: MIT
+
+⭐ Star us on GitHub if this helped you!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
         """
     )
     
