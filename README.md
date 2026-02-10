@@ -104,6 +104,9 @@ pip install -r requirements.txt
 ```
 
 ### First Run
+
+Activate the virtual environment and run your first scrape:
+
 ```bash
 source venv/bin/activate
 python scrapper.py -u https://unsplash.com -n 50
@@ -111,19 +114,43 @@ python scrapper.py -u https://unsplash.com -n 50
 
 🎉 **Done!** Images will be in the `downloaded_images/` folder.
 
+### 🆘 Get Help
+
+View all available options and usage examples:
+
+```bash
+python scrapper.py --help
+```
+
+or use the short form:
+
+```bash
+python scrapper.py -h
+```
+
 ---
 
 ## 📖 Usage
 
 ### Basic Command Structure
+
 ```bash
 python scrapper.py -u <URL> -n <NUMBER> [OPTIONS]
+```
+
+### 🆘 Help Command
+
+View all available options, default values, and examples:
+
+```bash
+python scrapper.py --help
 ```
 
 ### Command Line Arguments
 
 | Flag | Long Form | Description | Default | Example |
 |------|-----------|-------------|---------|---------|
+| `-h` | `--help` | Show help message and exit | - | `python scrapper.py -h` |
 | `-u` | `--url` | Target website URL (**required**) | - | `https://example.com` |
 | `-n` | `--num-images` | Number of images to download | `100` | `500` |
 | `-d` | `--depth` | Crawl depth (how many pages deep) | `2` | `3` |
@@ -161,10 +188,22 @@ python scrapper.py -u https://dribbble.com -n 300 -d 2 \
 Fine-tuned filtering for specific content types.
 
 ### 📊 **Dataset Creation**
+
 ```bash
 python scrapper.py -u https://example.com/category -n 1000 -d 4 -o dataset
 ```
+
 Build machine learning datasets with thousands of categorized images.
+
+### 🆘 **Need Help?**
+
+```bash
+# Show all options and examples
+python scrapper.py --help
+
+# Or use short form
+python scrapper.py -h
+```
 
 ---
 
@@ -302,6 +341,19 @@ async def download_images():
     await scraper.run()
 
 asyncio.run(download_images())
+```
+
+### 🆘 Quick Help Reference
+
+```bash
+# View all options
+python scrapper.py --help
+
+# Quick test (10 images)
+python scrapper.py -u https://example.com -n 10
+
+# Production use (1000 images, depth 3)
+python scrapper.py -u https://example.com -n 1000 -d 3
 ```
 
 ### 🎨 **Custom Filtering**
@@ -466,10 +518,15 @@ If this project helped you, please give it a ⭐ star!
 
 Having issues? Here's how to get help:
 
-1. 📖 Check the [Troubleshooting](#-troubleshooting) section
-2. 🔍 Search [existing issues](https://github.com/NYX-VORAX/lightning-image-scraper/issues)
-3. 💬 Start a [discussion](https://github.com/NYX-VORAX/lightning-image-scraper/discussions)
-4. 🐛 [Open a new issue](https://github.com/NYX-VORAX/lightning-image-scraper/issues/new)
+1. 📖 Check the built-in help:
+   ```bash
+   python scrapper.py --help
+   ```
+
+2. 📖 Read the [Troubleshooting](#-troubleshooting) section
+3. 🔍 Search [existing issues](https://github.com/NYX-VORAX/lightning-image-scraper/issues)
+4. 💬 Start a [discussion](https://github.com/NYX-VORAX/lightning-image-scraper/discussions)
+5. 🐛 [Open a new issue](https://github.com/NYX-VORAX/lightning-image-scraper/issues/new)
 
 ---
 
